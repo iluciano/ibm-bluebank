@@ -5,6 +5,15 @@ O esqueleto do projeto foi gerado usando o Yeoman, aumentando a produtividade j�
 
 Para rodar o projeto, após o clone, dentro da pasta app, abra o arquivo index.html no navegador ou com o gulp rodar o comando gulp e gulp serve.
 
+# Dados para testes
+Agência: 1010
+Conta: 101010
+Password: 123
+
+Agência: 1010
+Conta: 202020
+Password: 321
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
