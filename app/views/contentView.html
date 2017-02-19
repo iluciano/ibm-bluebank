@@ -16,15 +16,15 @@
         <md-content class="md-padding">
             <md-input-container flex-gt-xs>
                 <label>Agência Destino</label>
-                <input ng-model="user.agencia_dest">
+                <input ng-model="user.agencia_dest" number-only />
             </md-input-container>
             <md-input-container flex-gt-xs>
                 <label>Conta Destino</label>
-                <input ng-model="user.conta_corrente_dest">
+                <input ng-model="user.conta_corrente_dest" number-only />
             </md-input-container>
             <md-input-container flex-gt-xs>
                 <label>Valor</label>
-                <input ng-model="user.valorTrans">
+                <input ng-model="user.valorTrans" number-only />
             </md-input-container>
             <md-content class="md-padding">
                 <md-button ng-click="openFromLeft()" class="md-raised">OK</md-button>

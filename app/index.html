@@ -32,15 +32,15 @@
                 <div class="div-input" ng-hide="$root.usuarioLogado != null">
                     <md-input-container class="md-input-container-tool" flex-gt-xs>
                         <label class="label-tool">Agência</label>
-                        <input class="input-tool" ng-model="user.agencia">
+                        <input class="input-tool" ng-model="user.agencia" number-only />
                     </md-input-container>
                     <md-input-container class="md-input-container-tool" flex-gt-xs>
                         <label class="label-tool">Conta</label>
-                        <input class="input-tool" ng-model="user.conta_corrente">
+                        <input class="input-tool" ng-model="user.conta_corrente" number-only />
                     </md-input-container>
                     <md-input-container class="md-input-container-tool" flex-gt-xs>
                         <label class="label-tool">Senha</label>
-                        <input class="input-tool" ng-model="user.password" type="password">
+                        <input class="input-tool" ng-model="user.password" type="password" number-only />
                     </md-input-container>
                 </div>
                 <div flex-gt-sm="20" ng-hide="$root.usuarioLogado != null">
