@@ -3,6 +3,8 @@
 Projeto criado para o teste da oportunidade de Front-End na IBM
 O esqueleto do projeto foi gerado usando o Yeoman, aumentando a produtividade já que ele automatiza o build e gerencia dependências. Além de ajudar muito nos testes unitários.
 
+Usei arquiterura SPA e simulei dados de uma API no service.
+
 Para rodar o projeto, após o clone, dentro da pasta app, abra o arquivo index.html no navegador ou com o gulp rodar o comando gulp e gulp serve.
 
 # Dados para testes
