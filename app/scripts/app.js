@@ -2,36 +2,17 @@
 
 /**
  * @ngdoc overview
- * @name ibmBlueBankApp
+ * @name app
  * @description
- * # ibmBlueBankApp
+ * # app
  *
  * Main module of the application.
  */
 angular
-  .module('ibmBlueBankApp', [
+  .module('app', [
     'ngAnimate',
     'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ui.router',
+    'ngMaterial',
+    'ngMdIcons'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
