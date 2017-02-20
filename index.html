@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Blue Bank</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/angular-material.css">
+    <link rel="stylesheet" href="style/angular-material-icons.css">
+  </head>
+  <body>
+    <md-content>
+        <md-toolbar class="md-hue-2" ng-controller="toolbarController" ng-cloak>
+            <div class="md-toolbar-tools">
+                <div class="logo">
+                    <span>B</span>
+                </div>
+                <h2>Blue Bank</h2>
+                <div class="div-input" ng-hide="$root.usuarioLogado != null">
+                    <md-input-container class="md-input-container-tool" flex-gt-xs>
+                        <label class="label-tool">Agência</label>
+                        <input class="input-tool" ng-model="user.agencia" number-only />
+                    </md-input-container>
+                    <md-input-container class="md-input-container-tool" flex-gt-xs>
+                        <label class="label-tool">Conta</label>
+                        <input class="input-tool" ng-model="user.conta_corrente" number-only />
+                    </md-input-container>
+                    <md-input-container class="md-input-container-tool" flex-gt-xs>
+                        <label class="label-tool">Senha</label>
+                        <input class="input-tool" ng-model="user.password" type="password" number-only />
+                    </md-input-container>
+                </div>
+                <div flex-gt-sm="20" ng-hide="$root.usuarioLogado != null">
+                    <md-checkbox ng-model="user.lembrar" aria-label="Lembrar">
+                        Lembrar
+                    </md-checkbox>
+                    <md-button ng-hide="$root.usuarioLogado != null" ng-click="logar(user)" class="md-raised">OK</md-button>
+                </div>
+                <div style="float: right; position: absolute; right: 10px; top: 15px; color: white;" ng-show="$root.usuarioLogado != null">
+                    <span>{{$root.usuarioLogado.name}}, bem vindo!</span>
+                    <md-button ng-click="logout()" md-no-ink class="md-primary">Logout</md-button>
+                </div>
+            </div>
+        </md-toolbar>           
+    </md-content>
+    <md-content layout="column" layout-align="center center" ng-hide="$root.usuarioLogado != null">
+        <div class="logoHome">
+            <span>B</span>
+        </div>
+        <h1>Blue Bank - Seu Banco</h1>
+    </md-content>   
+    <md-content flex layout-padding>
+        <div ui-view></div> 
+    </md-content>   
+    
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-material.js"></script>
+    <script src="scripts/angular-material-icons.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="scripts/angular-aria.js"></script>
+    <script src="scripts/moment.js"></script>
+    <script src="scripts/pt-br.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/toolbarController.js"></script>
+    <script src="app/controllers/contentController.js"></script>
+    <script src="app/services/userService.js"></script>
+    <script src="app/configs/routeConfig.js"></script>
+  </body>
+</html>          

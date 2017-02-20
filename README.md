@@ -5,7 +5,7 @@ O esqueleto do projeto foi gerado usando o Yeoman, aumentando a produtividade j�
 
 Usei arquiterura SPA e simulei dados de uma API no service.
 
-Para rodar o projeto, após o clone, dentro da pasta app, abra o arquivo index.html no navegador ou com o gulp rodar o comando gulp e gulp serve.
+Para rodar o projeto, após o clone, abra o arquivo index.html no navegador ou com o gulp, rodar o comando gulp e gulp serve.
 
 # Dados para testes
 Agência: 1010

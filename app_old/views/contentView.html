@@ -1,0 +1,110 @@
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Saldo">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Saldo</h1>
+          <p>Óla, {{$root.usuarioLogado.name}}!</p>
+          <p>O seu saldo atual é de: {{$root.usuarioLogado.valor_conta | currency:"R$":0}}</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Transfêrencia">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Transfêrencia</h1>
+          <h3>Saldo atual: {{$root.usuarioLogado.valor_conta | currency:"R$":0}}</h3>
+        </md-content>
+        <md-content class="md-padding">
+            <md-input-container flex-gt-xs>
+                <label>Agência Destino</label>
+                <input ng-model="user.agencia_dest" number-only />
+            </md-input-container>
+            <md-input-container flex-gt-xs>
+                <label>Conta Destino</label>
+                <input ng-model="user.conta_corrente_dest" number-only />
+            </md-input-container>
+            <md-input-container flex-gt-xs>
+                <label>Valor</label>
+                <input ng-model="user.valorTrans" number-only />
+            </md-input-container>
+            <md-content class="md-padding">
+                <md-button ng-click="openFromLeft()" class="md-raised">OK</md-button>
+            </md-content>
+        </md-content>    
+      </md-tab>
+      <md-tab label="Perfil">
+        <md-content class="md-padding">
+            <h1 class="md-display-2">Perfil</h1>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media" layout>
+                            <ng-md-icon icon="person" style="fill:lightgreen" size="64"></ng-md-icon>
+                        </div>
+                    </md-card-title-media>
+                    <md-card-title-text>
+                        <span class="md-headline">{{$root.usuarioLogado.name}}</span>
+                        <md-card-actions layout="row" layout-align="center center">
+                            <md-content layout-padding>
+                                <form name="projectForm">
+                                    <md-input-container class="md-block">
+                                        <label>Descrição</label>
+                                        <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+                                        <div ng-messages="projectForm.description.$error">
+                                        <div ng-message="required">Preechimento Obrigatório.</div>
+                                        <div ng-message="md-maxlength">A descrição deve ter menos de 30 caracteres.</div>
+                                        </div>
+                                    </md-input-container>
+                                    <div layout="row">
+                                        <md-input-container flex="50">
+                                        <label>Nome</label>
+                                        <input required name="clientName" ng-model="user.name">
+                                        <div ng-messages="projectForm.clientName.$error">
+                                            <div ng-message="required">Preechimento Obrigatório.</div>
+                                        </div>
+                                        </md-input-container>
+
+                                        <md-input-container flex="50">
+                                        <label>Sexo</label>
+                                        <md-select name="type" ng-model="user.sexo" required>
+                                            <md-option value="masculino">Masculino</md-option>
+                                            <md-option value="feminino">Feminino</md-option>
+                                        </md-select>
+                                        </md-input-container>
+                                    </div>
+
+                                    <md-input-container class="md-block">
+                                        <label>Email</label>
+                                        <input required type="email" name="clientEmail" ng-model="user.email"
+                                            minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+                                        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                            Seu e-mail deve ter entre 10 e 100 caracteres e parecer um endereço de e-mail.
+                                        </div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block">
+                                        <md-checkbox name="tos" ng-model="project.tos" required>
+                                        Aceito os Termos de Serviço.
+                                        </md-checkbox>
+                                        <div ng-messages="projectForm.tos.$error" multiple md-auto-hide="false">
+                                        <div ng-message="required">
+                                            Você deve aceitar os termos de serviço antes de prosseguir.
+                                        </div>
+                                        </div>
+                                    </md-input-container>
+                                    <div>
+                                        <md-button type="submit">Enviar</md-button>
+                                    </div>
+                                </form>
+                            </md-content>
+                        </md-card-actions>
+                    </md-card-title-text>
+                </md-card-title>
+            </md-card>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
