@@ -7,6 +7,9 @@ Usei arquiterura SPA e simulei dados de uma API no service.
 
 Para rodar o projeto, após o clone, abra o arquivo index.html no navegador ou com o gulp, rodar o comando gulp e gulp serve.
 
+Fiz deploy em meu servidor, segue link:
+# www.igorluciano.com.br/ibm-bluebank
+
 # Dados para testes
 Agência: 1010
 Conta: 101010
